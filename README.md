@@ -26,6 +26,9 @@ JWT is used to securely authenticate users. Upon logging in, a token is generate
 If no token is found, the user is redirected to the login page with an alert parameter, indicating that authentication is required.
 If the token is expired, it clears the expired token cookie and redirects the user to the home page with an alert parameter.
 
+Routes:
+The C-Notes router is a dedicated Express router designed to handle routes related to C programming notes in a web application. It organizes the routing for specific C language topics and serves the corresponding views when users navigate to those routes.
+
 yes thats all about my project hope you like it appriciate it.
 Thanks!!
 
