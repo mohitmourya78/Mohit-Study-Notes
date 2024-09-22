@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About-MohitNotes</title>
+    {{>homecss}}
+    {{>aboutcss}}
+</head>
+
+<body>
+
+    {{>navbar}}
+
+    <div class="container">
+        <div class="content">
+            <h1 class="anima" style="font-size:40px ">About</h1>
+            <br>
+            <br>
+            <h3> Hii <span style="color: red;">{{user.name}}</span>, Want to Know about us? </h3>
+            <br>
+            <br>
+            <h3 class="anima">My Self Mohit Mourya.</h3>
+            <p class="anima">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla impedit obcaecati!
+                Dolorem esse
+                ex eligendi quas nostrum, illo unde mollitia ducimus eos! Sapiente corrupti dignissimos mollitia? Quis
+                magni omnis, culpa consectetur impedit eius, ipsum, dolor minus dolores obcaecati porro unde. Delectus
+                natus et earum aperiam, labore id tenetur eaque reiciendis, ut cumque iusto suscipit quia alias.
+                Quibusdam temporibus iusto quam reprehenderit voluptatibus exercitationem. Repellat, dolor, aliquid
+                inventore adipisci iusto, deserunt doloribus laboriosam facilis quae sapiente ipsum officia animi
+                maiores culpa velit vero mollitia. Consequuntur doloribus voluptatum ullam, quasi cumque dolorum alias
+                dolor! Molestiae quod debitis culpa eum cum ad.</p>
+            <br>
+            <br>
+            <h1 class="anima">Copmany Details</h1>
+            <p class="anima">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla impedit obcaecati!
+                Dolorem esse
+                ex eligendi quas nostrum, illo unde mollitia ducimus eos! Sapiente corrupti dignissimos mollitia? Quis
+                magni omnis, culpa consectetur impedit eius, ipsum, dolor minus dolores obcaecati porro unde. Delectus
+                natus et earum aperiam, labore id tenetur eaque reiciendis, ut cumque iusto suscipit quia alias.
+                Quibusdam temporibus iusto quam reprehenderit voluptatibus exercitationem. Repellat, dolor, aliquid
+                inventore adipisci iusto, deserunt doloribus laboriosam facilis quae sapiente ipsum officia animi
+                maiores culpa velit vero mollitia. Consequuntur doloribus voluptatum ullam, quasi cumque dolorum alias
+                dolor! Molestiae quod debitis culpa eum cum ad.</p>
+            <br>
+            <br>
+            <h1 class="anima">Address</h1>
+            <p class="anima">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente nulla impedit obcaecati!
+                Dolorem esse
+                ex eligendi quas nostrum, illo unde mollitia ducimus eos! Sapiente corrupti dignissimos mollitia? Quis
+                magni omnis, culpa consectetur impedit eius, ipsum, dolor minus dolores obcaecati porro unde. Delectus
+                natus et earum aperiam, labore id tenetur eaque reiciendis, ut cumque iusto suscipit quia alias.
+                Quibusdam temporibus iusto quam reprehenderit voluptatibus exercitationem. Repellat, dolor, aliquid
+                inventore adipisci iusto, deserunt doloribus laboriosam facilis quae sapiente ipsum officia animi
+                maiores culpa velit vero mollitia. Consequuntur doloribus voluptatum ullam, quasi cumque dolorum alias
+                dolor! Molestiae quod debitis culpa eum cum ad.</p>
+
+
+        </div>
+        <div class="sideimg">
+            <img src="img/Sideimg.jpg" alt="logo">
+        </div>
+    </div>
+    {{>footer}}
+   
+
+    <script>
+
+        const burger = document.querySelector('.burger')
+const navbar = document.querySelector('.navbar')
+const navList = document.querySelector('.navlist')
+
+
+burger.addEventListener('click',()=>{
+    navList.classList.toggle('respnavv');
+    navbar.classList.toggle('respnavh');
+})
+
+
+    </script>        
+
+</body>
+
+</html>

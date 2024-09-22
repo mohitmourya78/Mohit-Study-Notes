@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Notes by MOhit</title>
+{{>ccss}}
+
+</head>
+
+<body>
+    {{>notesnavbar}}
+
+
+    <div class=" w-[100%] flex min-h-screen dark:bg-gray-900 dark:text-gray-200 ">
+        <div
+
+            class=" none w-[1%] sm:w-[1%] md:w-[25%] lg:w-[18%]">
+
+            <div class="sidenav bg-purple-50  scroll-smooth w-[50%] z-[9]  md:w-[25%] lg:w-[18%] md:top-[136px] fixed text-left shadow-xl h-[87vh] overflow-y-scroll top-[120px] dark:bg-slate-800 hidden md:block md:pl-3">
+                {{>csidenav}}
+                </div>
+            </div>
+
+
+        <div>
+
+        
+        
+            <div class="right-side md:px-8 w-[100%] px-2 md:w-[85%] mx-auto" id="p-0">
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+<button onclick="window.location.href = '/c-notes/comments-in-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+
+<button disabled style = " background-color: gray; " onclick="window.location.href = '/c-notes/variables-in-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                </div>
+
+
+
+                <div class=" pt-2 cont font-karla min-h-screen dark:text-gray-200">
+                     <h1> C Variables
+                    </h1>
+                    <p> Variables are containers for storing data values.
+                    </p>
+                    <p> In C, there are different types of variables.
+
+                        For example </p>
+                                        <ul>
+                                            <li> an integer variable defined with the keyword int stores integers (whole numbers), without decimals, such as 91 or -13.
+
+                                            </li>
+
+                                            <li>  a floating point variable defined with keyword float stores floating point numbers, with decimals, such as 99.98 or -1.23.
+                                            </li>
+                                            <li> a character variable defined with the keyword char stores single characters, such as 'A' or 'z'. Char values are bound to be surrounded by single quotes.
+
+                                            </li>
+                                        </ul>
+                    <h1> Declaration </h1>
+    <p> We cannot declare a variable without specifying its data type. The data type of a variable depends on what we want to store in the variable and how much space we want it to hold. The syntax for declaring a variable is simple: </p>
+     
+    <div class="code-toolbar"> 
+        <code class="language-c" >
+            <span class=" token directive-hash"> data_type  variable_name; </span>
+            <br>
+        </code>
+        <pre>
+    </div>
+
+    <p> OR </p> 
+    <div class="code-toolbar"> 
+        <code class="language-c" >
+            <span class=" token directive-hash"> data_type  variable_name = value;
+            </span>
+            <br>  
+        </code>
+        <pre>
+    </div>
+
+    <h1> Naming a Variable </h1>
+    <p> There is no limit to what we can call a variable. Yet there are specific rules we must follow while naming a variable:</p>
+
+    <ul>
+        <li> A variable name can only contain alphabets, digits, and underscores(_).
+         </li>
+        <li> A variable cannot start with a digit.
+         </li>
+        <li> A variable cannot include any white space in its name.
+         </li>
+        <li> The name should not be a reserved keyword or any special character.
+        </li>
+    </ul>
+
+    <p> A variable, as its name is defined, can be altered, or its value can be changed, but the same is not true for its type. If a variable is of integer type, then it will only store an integer value through a program. We cannot assign a character type value to an integer variable. We can not even store a decimal value into an integer variable. </p>
+
+
+
+
+
+                </div>
+
+
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+                    <button onclick="window.location.href = '/c-notes/comments-in-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+                    
+                    <button disabled style = " background-color: gray; " onclick="window.location.href = '/c-notes/variables-in-c'" class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                                    </div>
+                                    {{>footer}}
+
+            </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

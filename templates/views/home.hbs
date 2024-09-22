@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MohitNotes-Check New Subject's</title>
+    <link rel="shortcut icon" href="public/img/mn-initial-letters-logo-design-free-vector.jpg" type="image/x-icon">
+
+
+{{>homecss}}
+
+</head>
+
+<body>
+  {{>navbar}}
+
+    <div class="seperation-line"></div>
+
+    <section id="scrollTarget" class="heading2">
+        <span> <img src="img/564445.png" alt="notes">
+            Check Our Free NOTES</span>
+
+        <div class="grid">
+            
+            {{#each services}}
+    <div class="item" data-name="{{this.name}}">
+        <div class="item-sub">
+            {{this.name}} Notes
+        </div>
+        <p> ({{this.description}})</p>
+        <p>{{this.status}}</p>
+        <a href="{{this.download_link}}" style="text-decoration: none" class="secbtn">Download</a>
+        <a href="{{this.view_link}}" style="text-decoration: none" class="secbtn">View Notes</a>
+    </div>
+    {{/each}}
+           
+            
+        </div> 
+    </section>
+    <br>
+    <br>
+
+    <div class="seperation-line"></div>
+
+
+    {{>footer}}
+    
+  <script>
+
+    function redirectToGrid() {
+        window.location.href = "home#scrollTarget";
+    }
+
+    const burger = document.querySelector('.burger')
+    const navbar = document.querySelector('.navbar')
+    const navList = document.querySelector('.navlist')
+
+
+burger.addEventListener('click',()=>{
+    navList.classList.toggle('respnavv');
+    navbar.classList.toggle('respnavh');
+
+})
+    document.getElementById("fstbtn").addEventListener("click", function() {
+        const scrollTarget = document.getElementById("scrollTarget");
+        scrollTarget.scrollIntoView({ behavior: "smooth", block:"start" });
+    });
+    
+    
+    const token = "{{token}}";
+    if (token) {
+        localStorage.setItem('token', token);
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('alert')) {
+        alert("Your session has expired. Please log in again to continue.");
+    }
+
+
+
+   
+</script>
+
+
+
+
+</body>
+
+</html>

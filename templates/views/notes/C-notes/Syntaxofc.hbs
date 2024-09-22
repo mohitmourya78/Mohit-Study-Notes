@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Notes by MOhit</title>
+{{>ccss}}
+
+</head>
+
+<body>
+    {{>notesnavbar}}
+
+
+    <div class=" w-[100%] flex min-h-screen dark:bg-gray-900 dark:text-gray-200 ">
+        <div
+
+            class="none w-[1%] sm:w-[1%] md:w-[25%] lg:w-[18%]">
+
+            <div class="sidenav bg-purple-50  scroll-smooth w-[50%] z-[9]  md:w-[25%] lg:w-[18%] md:top-[136px] fixed text-left shadow-xl h-[87vh] overflow-y-scroll top-[120px] dark:bg-slate-800 hidden md:block md:pl-3">
+                {{>csidenav}}
+                </div>
+            </div>
+
+
+        <div>
+
+        
+        
+            <div class="right-side md:px-8 w-[100%] px-2 md:w-[85%] mx-auto" id="p-0">
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+<button onclick="window.location.href = '/c-notes' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+
+<button onclick="window.location.href = '/c-notes/comments-in-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                </div>
+
+
+
+                <div class="flex mt-5 "> <h1 class="flex text-3xl lg:text-4xl font-semibold text-gray-800 dark:text-white mb-1"> Syntax Of C </h1>
+                </div>
+
+                <div class=" pt-2 cont font-karla min-h-screen dark:text-gray-200">
+                    <h1>Basic Structure </h1>
+                    <p> Programming in C involves following a basic structure throughout. Here’s what it can be broken down to.
+                         </p>
+                   <ul>
+
+                       <li>
+                           
+                        Pre-processor commands
+                    </li>
+                       <li>
+                           
+                        Functions
+                    </li>
+                       <li>
+                           
+                             variables
+                    </li>
+                       <li>
+                           
+                        Statements
+                      </li>
+
+                       <li>
+                           
+                        Expressions
+                    </li>
+                       <li>
+                           
+                        Comments
+                    </li>
+                </ul>
+                    
+                  <h1> Pre-processor commands </h1>
+                  <p>Pre-processor commands are commands which tell our program that before its execution, it must include the file name mentioned in it because we are using some of the commands or codes from this file.
+
+                    They add functionalities to a program.
+                    
+                    One example could be, </p>
+
+                    <div class="code-toolbar"> 
+                        <code class="language-c" >
+                            <span class=" token directive-hash"> &nbsp # include &ltmath.h&gt</span>
+                            </span>
+                        </code>
+                        <pre>
+                    </div>
+
+                    <p> We include math.h to be able to use some special functions like power and absolute. #include<filename.h> is how we include them into our programs.
+
+                        Detailed explanations of everything else in the structure will follow in the later part of the tutorial. 
+                    </p>  
+                    
+                    <h1> Header files: </h1>
+                    <ul>
+
+                        <li>
+                            
+                            Collection of predefined/built in functions developed
+                                             </li>
+                        <li>
+                            
+                               It is always declares on heading side of program hence it is called header file
+
+                        </li>
+                        <li>
+                            
+                            It is identified with the extension(.h)
+
+                        </li>
+                        <li>
+                            
+                            It gets installed while installing IDE(integrated development environment)
+
+                        </li>
+                        <li>
+                            
+                               It stores functions as per their categories hence they are called library
+
+                        </li>
+
+                    </ul>
+
+                    <h1> Syntax </h1>
+                    <p> An example below shows how a basic C program is written.</p>
+
+                    <div class="code-toolbar"> 
+                        <code class="language-c" >
+                            <span class=" token directive-hash"> Declaration of header file  &nbsp &nbsp &nbsp &nbsp //name of the header files of which functions are been used</span>
+                           
+                            <br>
+                            <span class=" token directive-hash"> main()	 &nbsp &nbsp &nbsp &nbsp /*it is called main function which stores the execution of program*/</span>
+                           
+                            <br>
+                            <span class=" token directive-hash"> {	&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp //start of the program</span>
+                           
+                            <br>
+                            <span class=" token directive-hash">  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp  //program statements &nbsp &nbsp &nbsp &nbsp</span>
+                            <br>
+                          
+                            <span class=" token directive-hash"> }  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp //end of the program</span>
+                            
+                        </code>
+                        <pre>
+                    </div>
+
+                    <ul>
+
+                        <li>
+                            
+                            Here, the first line is a pre-processor command including a header file stdio.h.
+                        </li>
+                        <li>
+                            
+                            C ignores empty lines and spaces.
+
+                        </li>
+                        <li>
+                            
+                            There is a main() function then, which should always be there.
+
+                        </li>
+
+                    </ul>
+
+                   <p> A C program is made up of different tokens combined. These tokens include: </p>
+
+                   <p>Keywords</p>
+                   <p>Identifiers</p>
+                   <p>Constants</p>
+                   <p>String Literal</p>
+                   <p>Symbols</p>
+
+                   <h1> keywords </h1>
+                   <p> 
+                    Keywords are reserved words that can not be used elsewhere in the program for naming a variable or a function. They have a specific function or task and they are solely used for that. Their functionalities are pre-defined.
+                    
+                    One such example of a keyword could be return which is used to build return statements for functions. Other examples are auto, if, default, etc.
+                    
+                    Whenever we write any keyword in IDE  their colour slightly changes and it looks different from other variables or functions for example in turbo c all keywords are turns into white colour . </p>
+                   <h1> Identifiers
+                </h1>
+                   <p> 
+                    Identifiers are names given to variables or functions to differentiate them from one another. Their definitions are solely based on our choice but there are a few rules that we have to follow while naming identifiers. One such rule says that the name can not contain special symbols such as @, -, *, <, etc.
+
+C is a case-sensitive language so an identifier containing a capital letter and another one containing a small letter in the same place will be different. For example, the three words: Code, code, and cOde can be used as three different identifiers.
+
+Rules for naming identifier-
+1. One should not name any identifier starting with numeric value or symbol. It should start only with underscore or alphabet 
+2. They should not contain space
+3. Giving logical names is recommended as per our program </p>
+                   <h1> Constants </h1>
+                   <p> 
+                    Constants are very similar to a variable and they can also be of any data type. The only difference between a constant and a variable is that a constant’s value never changes.  We will see constants in more detail in the upcoming tutorial./p>
+                   <h1> String Literal
+                </h1>
+                   <p> 
+                    String literals or string constants are a sequence of characters enclosed in double quotation marks. For example,  “This is a string literal!” is a string literal. C method printf() utilizes the same to format the output. </p>
+            
+
+                </div>
+
+
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+                    <button onclick="window.location.href = '/c-notes' "class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+                    
+                    <button onclick="window.location.href = '/c-notes/comments-in-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                                    </div>
+                                    {{>footer}}
+
+            </div>
+
+            
+
+    </div>
+
+
+
+
+</body>
+
+</html>

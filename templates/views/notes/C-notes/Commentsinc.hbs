@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Notes by MOhit</title>
+{{>ccss}}
+
+</head>
+
+<body>
+    {{>notesnavbar}}
+
+
+    <div class=" w-[100%] flex min-h-screen dark:bg-gray-900 dark:text-gray-200 ">
+        <div
+
+            class=" none w-[1%] sm:w-[1%] md:w-[25%] lg:w-[18%]">
+
+            <div class="sidenav bg-purple-50  scroll-smooth w-[50%] z-[9]  md:w-[25%] lg:w-[18%] md:top-[136px] fixed text-left shadow-xl h-[87vh] overflow-y-scroll top-[120px] dark:bg-slate-800 hidden md:block md:pl-3">
+                {{>csidenav}}
+                </div>
+            </div>
+
+
+        <div>
+
+        
+        
+            <div class="right-side md:px-8 w-[100%] px-2 md:w-[85%] mx-auto" id="p-0">
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+<button onclick="window.location.href = '/c-notes/syntax-of-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+
+<button onclick="window.location.href = '/c-notes/variables-in-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                </div>
+
+
+                <div class=" pt-2 cont font-karla min-h-screen dark:text-gray-200">
+                     <h1> What is c comments ? </h1>
+                    <p> Comments can be used to insert any informative piece which a programmer does not wish to be executed. It could be either to explain a piece of code or to make it more readable. In addition, it can be used to prevent the execution of alternative code when the process of debugging is done.
+
+                        Comments can be singled-lined or multi-lined. </p>                    
+
+                        <h1> Single Line Comments </h1>
+                        <ul>
+
+                            <li>
+                                
+                                Single-line comments start with two forward slashes (//).
+
+                                                 </li>
+                            <li>
+                                
+                                Any information after the slashes // lying on the same line would be ignored (will not be executed).
+    
+                            </li>
+                        </ul>
+                        <p> An example of how we use a single-line comment <p>
+
+                            <div class="code-toolbar"> 
+                                <code class="language-c" >
+                                    <span class=" token directive-hash"> #include &ltstdio.h&gt </span>
+                                   
+                                    <br>
+                                    <span class=" token directive-hash"> int main() </span>
+                                   
+                                    <br>
+                                    <span class=" token directive-hash"> { </span>
+                                   
+                                    <br>
+                                    <span class=" token directive-hash">  &nbsp &nbsp &nbsp &nbsp   //This is a single line comment </span>
+                                    <br>
+
+                                    <span class=" token directive-hash"> &nbsp &nbsp &nbsp &nbsp printf("Hello World!"); </span>
+                                    <br>
+                                    <span class=" token directive-hash"> &nbsp &nbsp &nbsp &nbsp  return 0; </span>
+                                    <br>
+
+                                    <span class=" token directive-hash"> } </span>
+                                    
+                                </code>
+                                <pre>
+                            </div>
+
+
+                            <h1> Mutli Line Comments </h1>
+                            <ul>
+    
+                                <li>
+                                    
+                                    A multi-line comment starts with /* and ends with */.
+    
+                                                     </li>
+                                <li>
+                                    
+                                    Any information between /* and */ will be ignored by the compiler.
+        
+                                </li>
+                            </ul>
+                            <p> An example of how we use a multi-line comment <p>
+    
+                                <div class="code-toolbar"> 
+                                    <code class="language-c" >
+                                        <span class=" token directive-hash"> #include &ltstdio.h&gt </span>
+                                       
+                                        <br>
+                                        <span class=" token directive-hash"> int main() </span>
+                                       
+                                        <br>
+                                        <span class=" token directive-hash"> { </span>
+                                       
+                                        <br>
+                                        <span class=" token directive-hash">  &nbsp &nbsp &nbsp &nbsp   /* This is a
+                                            <br>
+                                            &nbsp &nbsp &nbsp &nbsp multi-line
+                                            <br>
+                                            &nbsp &nbsp &nbsp &nbsp comment */ </span>
+                                        <br>
+    
+                                        <span class=" token directive-hash"> &nbsp &nbsp &nbsp &nbsp printf("Hello World!"); </span>
+                                        <br>
+                                        <span class=" token directive-hash"> &nbsp &nbsp &nbsp &nbsp  return 0; </span>
+                                        <br>
+    
+                                        <span class=" token directive-hash"> } </span>
+                                        
+                                    </code>
+                                    <pre>
+                                </div>
+
+
+                </div>
+
+
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+                    <button onclick="window.location.href = '/c-notes/syntax-of-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+                    
+                    <button onclick="window.location.href = '/c-notes/variables-in-c'" class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                                    </div>
+                                    {{>footer}}
+
+            </div>
+
+    </div>
+
+
+
+
+</body>
+
+</html>

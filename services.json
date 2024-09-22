@@ -1,0 +1,107 @@
+[
+  {
+    "name": "C",
+    "description": "C Language",
+    "status": "Available",
+    "download_link": "files/Cnotes.pdf",
+    "view_link": "c-notes"
+  },
+  {
+    "name": "C++",
+    "description": "C++ Language",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "AI",
+    "description": "Artificial Intelligence",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "Data Structure",
+    "description": "Data Structure",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "CSS",
+    "description": "Cascading Style-Sheet",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "DBMS",
+    "description": "Database Management System",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "SE",
+    "description": "Software Engineering",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "HTML",
+    "description": "Hyper-text Markup Language",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "CG",
+    "description": "Computer Graphics",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "Python",
+    "description": "Python Programming Language",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "OS",
+    "description": "Operating System",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "CSA",
+    "description": "Computer System Architecture",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "JS",
+    "description": "JavaScript Language",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "Java",
+    "description": "JAVA Language",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  },
+  {
+    "name": "Cloud Computing",
+    "description": "Cloud Computing",
+    "status": "Unavailable",
+    "download_link": "",
+    "view_link": ""
+  }
+]

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Language Notes by MOhit</title>
+
+    {{>ccss}}
+
+</head>
+
+<body>
+    {{>notesnavbar}}
+
+
+    <div class=" w-[100%] flex min-h-screen dark:bg-gray-900 dark:text-gray-200 ">
+        <div
+
+            class=" none w-[1%] sm:w-[1%] md:w-[25%] lg:w-[18%]">
+
+            <div class="sidenav bg-purple-50  scroll-smooth w-[50%] z-[9]  md:w-[25%] lg:w-[18%] md:top-[136px] fixed text-left shadow-xl h-[87vh] overflow-y-scroll top-[120px] dark:bg-slate-800 hidden md:block md:pl-3">
+                {{>csidenav}}
+                </div>
+            </div>
+
+
+        <div>
+
+        
+        
+            <div class="right-side md:px-8 w-[100%] px-2 md:w-[85%] mx-auto" id="p-0">
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+<button  disabled style = " background-color: gray; "  class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+
+<button onclick="window.location.href = '/c-notes/syntax-of-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                </div>
+
+
+
+                <div class="flex mt-5 "> <h1 class="flex text-3xl lg:text-4xl font-semibold text-gray-800 dark:text-white mb-1"> C Overview </h1>
+                </div>
+
+                <div class=" pt-2 cont font-karla min-h-screen dark:text-gray-200">
+                     <h1> What is c? </h1>
+                    <ul>
+
+                        <li>
+                            
+                            Since the late 19th century, C has been a popular programming language for general-purpose use.
+                        </li>
+                        <li>
+                            <span lang="EN-US">C language was developed by Dennis M.&nbsp;Ritchie at bell laboratory in early 1970s</span>                        </li>
+                        <li>
+                            Its applications are very diverse. It ranges from developing operating systems to databases and all.⁣                        </li>
+                        <li>
+                            Even if it’s old, it is still a very popular programming language.⁣                        </li>
+                        <li>
+                            As the whole UNIX operating system was written in C, it has a strong association with the operating system⁣
+                        </li>
+                        <li>
+                            C has also been used widely while creating iOS and Android kernels.⁣
+
+                        </li>
+                        <li>
+                            MySQL database is written using C.⁣
+                        </li>
+                        <li>
+                            Ruby and Pearl are mostly written using C.⁣
+                        </li>
+                        <li>
+                            Most part of Apache and NGINX is written using C.⁣
+                        </li>
+                        <li>
+                            Embedded Systems are created using C⁣
+                        </li>
+
+                    </ul>
+
+                    <h1> Why should we learn C/ Features of C?</h1>
+                    <ul>
+
+                        <li>
+                            
+                            As mentioned above, it is one of the most popular programming languages in the world.
+                        </li>
+                        <li>
+                            Learning any other popular programming language such as Python or C++ becomes a cakewalk already if you know C.
+                       </li>
+                        <li>
+                            C is a flexible language and that gets proven by the fact that it can be used in a variety of applications as well as technologies. </li>
+
+
+                            <li>
+
+                                C is very fast when compared to other programming languages be it Java or Python.
+                            </li>
+                        <li>
+                            C takes only significant CPU time for interpretation. That is why a lot of Python libraries such as NumPy, pandas, Scikit-learn, etc. are built using C.
+                        </li>
+                        <li>
+                            Being close to Machine language, some of its functions include direct access to machine-level hardware APIs.
+
+                        </li>
+                        <li>
+                            It is a structural language (Follows a specific Structure) /Compiled language this point should be added
+
+                        </li>
+                        <li>
+                            It is procedural programming language (POP) Procedurall Programming is the use of code in a step-wise procedure to develop applications. 
+
+                        </li>
+
+                    </ul>
+
+
+                    <h1>How is it different from C++? </h1>
+                    <ul>
+
+                        <li>
+                            
+                            The syntax of C++ is almost identical to that of C, as C++ was developed as an extension of C.
+                        </li>
+                        <li>
+                            In contrast to C, C++ supports classes and objects, while C does not.
+
+                       </li>
+                        <li>
+                            C gives most of the control to the hand of users. Things like memory allocation and manipulation are totally in the hands of the programmer. Being a flexible language, it provides more access to the programmer because of which it is more efficient. </li>
+
+
+                            <li>
+
+                                .C is POP(procedure oriented programming) whereas c++ is OOP(Object oriented programming)
+
+                            </li>
+                        
+
+                    </ul>
+
+
+
+                </div>
+
+
+                <div class="mt-8 mb-6 justify-between hidden md:flex " id="gap">
+                    <button disabled style = " background-color: gray; " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > << Previous </button>
+                    
+                    <button onclick="window.location.href = '/c-notes/syntax-of-c' " class=" text-white cursor-pointer justify-center bg-purple-700 hover:bg-purple-800 focus:ring-4 focus:ring-purple-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center mx-1 disabled:bg-gray-200 disabled:text-gray-400 disabled:cursor-default dark:disabled:text-gray-300 dark:bg-purple-600 dark:hover:bg-purple-900 dark:disabled:bg-gray-500" > Next >> </button>
+                                    </div>
+
+                                    {{>footer}}
+
+         
+            </div>
+
+    </div>
+
+
+    <script>
+
+
+</script>
+
+
+</body>
+
+</html>

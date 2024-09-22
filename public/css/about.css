@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+   .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 80px;
+    font-family: 'Poppins', sans-serif;
+  }
+  .content {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .anima {
+    animation: text 1s 1;
+  }
+  @keyframes text {
+    0% {
+      color: black;
+      margin-bottom: 40px;
+    }
+  }
+  .sideimg {
+    animation: img 1s 1;
+  }
+  @keyframes img {
+    0% {
+      margin-left: 20px;
+    }
+  }
+  
+  
+  
+  @media screen and (max-width: 1024px) {
+  
+    .container {
+      display: block;
+      padding: 35px;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .sideimg {
+      width: 447px;
+      height: 435px;
+      margin: 60px 0px 6px 215px;
+    }
+  }
+  
+  @media screen and (max-width: 820px) {
+  
+    .container {
+      display: block;
+      padding: 35px;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .sideimg {
+      width: 447px;
+      height: 435px;
+      margin: 60px 0px 6px 127px;
+    }
+  }
+  
+  @media screen and (max-width: 768px ) {
+  
+    .container {
+      display: block;
+      padding: 35px;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .sideimg {
+      width: 447px;
+      height: 435px;
+      margin: 60px 0px 6px -37px;
+    }
+  }
+  
+  @media screen and (max-width: 430px) {
+  
+    .container {
+      display: block;
+      padding: 35px;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .sideimg {
+      width: 447px;
+      height: 435px;
+      margin: 60px 0px 6px -47px;
+    }
+  }
+  
+  @media screen and (max-width: 390px) {
+  
+    .container {
+      display: block;
+      padding: 35px;
+    }
+  
+    .content {
+      width: 100%;
+    }
+  
+    .sideimg {
+      width: 447px;
+      height: 435px;
+      margin: 60px 0px 6px -69px;
+    }
+  }
