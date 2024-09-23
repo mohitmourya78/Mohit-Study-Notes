@@ -1,6 +1,7 @@
 LIVE PREVIEW:-
 
 https://mohit-study-notes-1.onrender.com/
+(it takes time to load so please wait.)
 
 This web application is built using Node.js with Express and is designed for managing user registrations, logins, and services through a clean interface. It employs JWT (JSON Web Tokens) for user authentication and utilizes Handlebars as the templating engine for rendering views.
 
