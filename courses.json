@@ -1,0 +1,24 @@
+[
+    {
+      "name": "Web Devlopment",
+      "description": "Web Devlopment Course with basic using Html,Css,Js with Bootstrap and Tailwind.",
+      "status": "Unvailable",
+      "watch_link": "",
+      "image_url": "/img/coursesimg/webdev2.jpg"
+    },
+    {
+      "name": "Fronted Devlopment",
+      "description": "Fronted Development course with basic to advance using HTML5,CSS,Js(reactJs) with Bootstrap and Tailwind.",
+      "status": "Unavailable",
+      "watch_link": "",
+      "image_url": "/img/coursesimg/fronted.png"
+    },
+    {
+      "name": "Full Stack Devlopment",
+      "description": "Full Stack Development course with basic to advance using HTML5,CSS,Js(reactJs), for Backend Nodejs With Express js and MongoDB with Bootstrap and Tailwind.",
+      "status": "Unavailable",
+      "watch_link": "",
+      "image_url": "/img/coursesimg/fullstack.webp"
+    }
+  ]
+  

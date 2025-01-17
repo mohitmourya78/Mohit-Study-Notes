@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const servicesSchema = new mongoose.Schema({
+const coursesSchema = new mongoose.Schema({
 
     name: {
         type: String,
@@ -14,13 +14,9 @@ const servicesSchema = new mongoose.Schema({
         type: Array,
         required: true,
     },
-    download_link: {
+    Watch_link: {
         type: Array,
         required: true, 
-    },
-    view_link: {
-        type: Array,
-        required: true,
     },
 
     image_url: String,
@@ -29,6 +25,6 @@ const servicesSchema = new mongoose.Schema({
 
 
 
-const Service = mongoose.model('Service', servicesSchema);
+const Course = mongoose.model('Course', coursesSchema);
 
-module.exports = Service;
+module.exports = Course;

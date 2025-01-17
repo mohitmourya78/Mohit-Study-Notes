@@ -16,60 +16,32 @@
 </head>
 
 <body>
-    <div class="backgroundimg">
+    <div class="">
         <nav class="navbar respnavh">
             <div class="logo">
-                <a href="/"><img src="img/mn-initial-letters-logo-design-free-vector.jpg" alt="logo"></a>
+                <a href="home"><img src="img/mn-initial-letters-logo-design-free-vector.jpg" alt="logo"></a>
             </div>
-
+    
             <ul class="navlist respnavv">
-
-                <li><a href="/">Home <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
-                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-
-                    </a>
-                    </svg>
-                </li>
-                <li><a href="about">About <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
-                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </a>
-                    </svg>
-                </li>
-                <li><a href="contactt">Contact Us <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M6 9L11.2929 14.2929C11.6262 14.6262 11.7929 14.7929 12 14.7929C12.2071 14.7929 12.3738 14.6262 12.7071 14.2929L18 9"
-                                stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </a>
-                    </svg>
-                </li>
-
+    
+                <li><a href="/">Home</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="contactt">Contact Us</a></li>
+                <li><a href="">Blog</a></li>
+                <li><a href="">Courses</a></li>
+                <li><a href="">Notes</a></li>
+                <li><a href="">Work With Us</a></li>
+    
             </ul>
-            <div class="burger">
+    
+            <div class="burger" id= "burger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
             </div>
-            <div class="rightnav" id="rightnav">
-                <li class="login account"> <a href="registration" target="_blank">Log in</a> </li>
-                <li class="signup account"> <a href="registration" target="_blank">Sign up</a> </li>
-                <div class="search-container" id="search-container">
-                    <input type="text" placeholder="Search.." class="search-input" id="search-input">
-                    <div class="search-icon" id="search-icon" onclick="searchwarning()">
-                        <!-- You can use any search icon here -->
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                            <path
-                                d="M20.7 19l-5.2-5.2c1.2-1.4 1.9-3.3 1.9-5.3 0-4.4-3.6-8-8-8s-8 3.6-8 8 3.6 8 8 8c2 0 3.9-0.7 5.3-1.9l5.2 5.2c0.4 0.4 1 0.4 1.4 0 0.4-0.4 0.4-1 0-1.4zM4 10c0-3.3 2.7-6 6-6s" />
-                        </svg>
-                    </div>
-                </div>
-            </div>
+            
+           
+         
         </nav>
 
         <main>
@@ -149,6 +121,10 @@
                                     
                                     </div>
                                 </form>
+
+                                <p style="text-align:center;"> or,<a href="login" style="color:blue;"> Already have an account? </a> </p>
+
+                               
                                 </div>
                         </div>
                     </div>
@@ -206,6 +182,7 @@
                         {{/if}}
                         
                             <form action="/login" method="POST" id="registration-form">
+                                
                                 <div class="input-field">
 
                                     <label for="email1">
@@ -216,13 +193,16 @@
                                             placeholder="Enter Your Password">
                                     </label>
                                     {{#if passwordInvalid}}
-        <p class="text-danger">Invalid password</p>
-    {{/if}}
+                                       <p class="text-danger">Invalid password</p>
+                                                           {{/if}}
                                     <div class="input-field">
                                         <input type="submit" class="loginnn" value="Log in">
                                     
                                     </div>
+                                    
                                 </form>
+
+
                                 </div>
                         </div>
                     </div>
@@ -244,6 +224,8 @@ burger.addEventListener('click',()=>{
     navList.classList.toggle('respnavv');
     navbar.classList.toggle('respnavh');
 })
+
+
 
 
 const user_con = document.querySelector('.user-container');

@@ -4,6 +4,7 @@ const cNotes = require('../routes/c')
 const bcrypt = require("bcrypt")
 const authCheck = require("./models/authcheck")
 const service = require("./models/services")
+const course = require("./models/courses")
 const cookieParser = require('cookie-parser');
 const Cookies = require('cookies')
 const auth = require("./models/auth")
@@ -18,14 +19,14 @@ const hbs = require("hbs")
 require("./db/conn")
 const Register = require("./models/registers")
 const Contact = require("./models/contact")
-const port = 3000
+const port = 5000
 const static_path = path.join(__dirname, "../public")
 const templates_path = path.join(__dirname, "../templates/views")
 const partials_path = path.join(__dirname, "../templates/partials")
 
 
-app.use('/c-notes', cNotes)
 app.use(cookieParser());
+
 app.use(bodyParser.json());
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -51,17 +52,29 @@ hbs.registerPartials(partials_path)
 
 })*/
 
+app.use((req, res, next) => {
+    if (req.cookies && req.cookies.jwt) {
+        res.locals.isLoggedIn = true;  
+    } else {
+        res.locals.isLoggedIn = false; 
+    }
+    next();  
+});
+
+app.use('/c-notes', cNotes )
+
 app.get("/", async (req , res) => {
 
     try {
-        const services = await service.find(); // Fetching data from the Service model
-        if (!services.length) {
-            return res.status(400).json({ msg: "No services found" });
+        const services = await service.find(); 
+        const courses = await course.find(); 
+
+ 
+        if (!services.length && !courses.length) {
+            return res.status(400).json({ msg: "No data found" });
         }
-        res.render("home", { services });
-        services.forEach(service => {
-        }); 
-        
+
+        res.render('home', { services, courses, isLoggedIn: res.locals.isLoggedIn });
     } catch (error) {
         res.status(500).send("Internal Server Error");
     }
@@ -76,6 +89,7 @@ app.get("/login", (req, res) => {
     res.render("login")
 
 })
+
 
 
 app.get("/logout", auth, async (req, res) => {
@@ -121,14 +135,49 @@ app.get("/about", auth, (req, res) => {
 })
 
 
+
+
 app.get('/home', authCheck, async (req, res) => {
+    try {
+        const services = await service.find(); 
+        const courses = await course.find(); 
+
+        if (!services.length && !courses.length) {
+            return res.status(400).json({ msg: "No data found" });
+        }
+
+        res.render('home', { services, courses, isLoggedIn: res.locals.isLoggedIn });
+    } catch (error) {
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+
+app.get('/courses', auth, authCheck, async (req, res) => {
+
+    try {
+        const courses = await course.find(); 
+        if (!courses.length) {
+            return res.status(400).json({ msg: "No coursess found" });
+        }
+        res.render('courses', { courses ,  isLoggedIn: res.locals.isLoggedIn});
+        courses.forEach(course => {
+        }); 
+        
+    } catch (error) {
+        res.status(500).send("Internal Server Error");
+    }
+    
+});
+
+app.get('/notes', auth, authCheck, async (req, res) => {
 
     try {
         const services = await service.find(); // Fetching data from the Service model
         if (!services.length) {
             return res.status(400).json({ msg: "No services found" });
         }
-        res.render('home', { services ,  isLoggedIn: res.locals.isLoggedIn});
+        res.render('notes', { services ,  isLoggedIn: res.locals.isLoggedIn});
         services.forEach(service => {
         }); 
         
@@ -136,6 +185,11 @@ app.get('/home', authCheck, async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 
+    
+});
+app.get('/blog', auth, authCheck, async (req, res) => {
+
+        res.render('blog', { isLoggedIn: res.locals.isLoggedIn});
     
 });
 
@@ -156,7 +210,7 @@ app.post("/register", [
 
     if (!errors.isEmpty()) {
 
-        console.log("Validation Errors:", errors.array());
+        //console.log("Validation Errors:", errors.array());
 
 
         res.render('registration', { errors: errors.mapped() });
@@ -189,10 +243,13 @@ app.post("/register", [
 
                 //console.log("Generated Token:", token);
 
-                console.log("registration successfull")
+                //console.log("registration successfull");
+
                 
                 // res.status(201).render("login", { token });
-                res.redirect("login");
+
+                res.send("<script>alert('Registration successful!'); window.location.href='/login';</script>");
+
             }
 
         } catch (error) {
@@ -211,7 +268,7 @@ app.post("/login", [
 
     if (!errors.isEmpty()) {
 
-        console.log("Validation Errors:", errors.array());
+        //console.log("Validation Errors:", errors.array());
 
         res.render('login', { errors: errors.mapped() });
     }
@@ -238,11 +295,11 @@ app.post("/login", [
 
                 const token = await useremail.generateToken();
 
-                res.cookie("jwt", token, { httpOnly: true, secure: false, sameSite: 'lax' });
-                console.log("JWT cookie set:", token);
+                res.cookie("jwt", token, { httpOnly: true, secure: true, sameSite: 'lax' });
+                //console.log("JWT cookie set:", token);
 
 
-                console.log("login sucessfull")
+               // console.log("login sucessfull")
 
                 //res.render("home", { token }) not try this other you faced the refresh problem... 
                 res.redirect("home")

@@ -4,104 +4,48 @@
     "description": "C Language",
     "status": "Available",
     "download_link": "files/Cnotes.pdf",
-    "view_link": "c-notes"
+    "view_link": "c-notes",
+    "image_url": "/img/servicesimg/c.webp"
   },
   {
     "name": "C++",
     "description": "C++ Language",
     "status": "Unavailable",
     "download_link": "",
-    "view_link": ""
+    "view_link": "",
+    "image_url": "/img/servicesimg/cpp.webp"
   },
   {
-    "name": "AI",
-    "description": "Artificial Intelligence",
+    "name": "Java",
+    "description": "Java Full Course",
     "status": "Unavailable",
     "download_link": "",
-    "view_link": ""
+    "view_link": "",
+    "image_url": "/img/servicesimg/java.webp"
   },
   {
-    "name": "Data Structure",
-    "description": "Data Structure",
+    "name": "JS",
+    "description": "Java Script",
     "status": "Unavailable",
     "download_link": "",
-    "view_link": ""
+    "view_link": "",
+    "image_url": "/img/servicesimg/js.webp"
   },
   {
     "name": "CSS",
     "description": "Cascading Style-Sheet",
     "status": "Unavailable",
     "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "DBMS",
-    "description": "Database Management System",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "SE",
-    "description": "Software Engineering",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
+    "view_link": "",
+    "image_url": "/img/servicesimg/css.webp"
   },
   {
     "name": "HTML",
-    "description": "Hyper-text Markup Language",
+    "description": "HyperText Markup Language",
     "status": "Unavailable",
     "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "CG",
-    "description": "Computer Graphics",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "Python",
-    "description": "Python Programming Language",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "OS",
-    "description": "Operating System",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "CSA",
-    "description": "Computer System Architecture",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "JS",
-    "description": "JavaScript Language",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "Java",
-    "description": "JAVA Language",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
-  },
-  {
-    "name": "Cloud Computing",
-    "description": "Cloud Computing",
-    "status": "Unavailable",
-    "download_link": "",
-    "view_link": ""
+    "view_link": "",
+    "image_url": "/img/servicesimg/html.webp"
   }
+ 
 ]

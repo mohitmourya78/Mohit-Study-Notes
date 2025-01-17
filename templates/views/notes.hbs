@@ -1,8 +1,22 @@
-<div class="backgroundcolor">
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MohitNotes-Check New Subject's</title>
+    <link rel="shortcut icon" href="public/img/mn-initial-letters-logo-design-free-vector.jpg" type="image/x-icon">
+
+
+{{>homecss}}
+
+</head>
+
+<body>
+  
     <nav class="navbar respnavh">
         <div class="logo">
-            <a href="/"><img src="/img/mn-initial-letters-logo-design-free-vector.jpg" alt="logo"></a>
+            <a href="home"><img src="img/mn-initial-letters-logo-design-free-vector.jpg" alt="logo"></a>
         </div>
 
         <ul class="navlist respnavv">
@@ -10,10 +24,19 @@
             <li><a href="/">Home</a></li>
             <li><a href="about">About</a></li>
             <li><a href="contactt">Contact Us</a></li>
-            <li><a href="blog">Blog</a></li>
-            <li><a href="">Courses</a></li>
+            <li><a href="">Blog</a></li>
+            <li><a href="/courses">Courses</a></li>
+            <li class="menu-item dropdown"><a>Tutorial &dtrif;</a>
+                <ul class="dropdown">
+                    <li><a href="#">Web Devlopment</a></li>
+                    <li><a href="#">Full Stack Development</a></li>
+                    <li><a href="#">Fronted Devlopment</a></li>
+                    <li><a href="#">Data Analytics</a></li>
+                    <li><a style="color: blue;" href="/courses">More</a></li>
+                  </ul>
+            </li>
             <li><a href="/notes">Notes</a></li>
-            <li><a href="contactt">Work With Us</a></li>
+            <li><a href="">Work With Us</a></li>
 
         </ul>
 
@@ -22,8 +45,6 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
-
-        
         
         <div class="rightnav">
             <div class="logsign" id="authLinks">
@@ -52,48 +73,53 @@
                 </div>
             </div> 
         </div>
-
-        
+     
     </nav>
 
+    <button id="scrollToTopBtn" class="scroll-to-top-btn">&#x2191;</button>
+
+
+    <section id="scrollTarget" class=" heading2">
+        <span> <img src="img/564445.png" alt="notes">
+            Download Notes By Dank Mohit</span>
+
+        <div class="grid">
+            
+            {{#each services}}
+
+    <div class="item" data-name="{{this.name}}">
+        {{#if this.image_url}}
+            <img src="{{this.image_url}}" alt="{{this.name}} image" class="service-image" />
+        {{/if}}
+        <div class="item-sub">
+            {{this.name}} Notes
+        </div>
+        <p> ({{this.description}})</p>
+        <p>{{this.status}}</p>
+        <a href="{{this.download_link}}" style="text-decoration: none" class="secbtn">Download</a>
+        <a href="{{this.view_link}}" style="text-decoration: none" class="secbtn">View Notes</a>
+    </div>
+    {{/each}}
+           
+            
+        </div> 
+    </section>
+
+    {{>footer}}
+
+    <script>
+
     
-</div>
-<div class="menu-toggle hidemenu" id="menuToggle">
-    Menu &gt
-  </div>
-
-  <button id="scrollToTopBtn" class="scroll-to-top-btn">&#x2191;</button>
-
-
-
-<script> 
-
-    document.addEventListener('DOMContentLoaded', () => {
-        const burger = document.querySelector('.burger');
-        const navbar = document.querySelector('.navbar');
-        const navList = document.querySelector('.navlist');
-        const menuToggle = document.querySelector('#menuToggle');
-        const navside = document.querySelector('.navside'); 
-        const sidenav = document.querySelector('.none') 
+        const burger = document.querySelector('.burger')
+        const navbar = document.querySelector('.navbar')
+        const navList = document.querySelector('.navlist')
     
-        burger.addEventListener('click', () => {
-            navList.classList.toggle('respnavv');   
-            navbar.classList.toggle('respnavh');    
-            burger.classList.toggle('active');  
-        });
     
-        menuToggle.addEventListener('click', () => {
-            sidenav.classList.toggle('respside');
-
-            if (sidenav.classList.contains('respside')) {
-                menuToggle.textContent = 'Close >';
-            } else {
-                menuToggle.textContent = 'Menu >';
-            }
-
-        });
-    });
+    burger.addEventListener('click',()=>{
+        navList.classList.toggle('respnavv');
+        navbar.classList.toggle('respnavh');
     
+    })
 
     document.addEventListener('DOMContentLoaded', () => {
         const scrollToTopBtn = document.getElementById('scrollToTopBtn');
@@ -113,7 +139,7 @@
           });
         });
       });
-      
+    
+    </script>
 
-
-</script>
+</body>
